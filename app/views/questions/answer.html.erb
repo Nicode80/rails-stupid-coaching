@@ -1,21 +1,13 @@
 <h1>Stupid Coaching</h1>
 
-<div style="margin: 5px; background-color: white; border-left: 3px solid grey">
+<div class="container ask">
   <p><%= @answer %></p>
-  <p>-You</p>
+  <p class="person">-You</p>
 </div>
 
-<div style="margin: 5px; background-color: yellow; border-left: 3px solid grey">
-  <% if @answer == "I am going to work" %>
-    <p>Great!</p>
-  <% elsif @answer.chars.last == "?" %>
-    <p>Silly question, get dressed and go to work!</p>
-  <% else %>
-    <p>I don't care, get dressed and go to work!</p>
-  <% end %>
-  <p>-Your coach</p>
-
-
+<div class="container answer">
+  <p><%= @answer %></p>
+  <p class="person">-Your coach</p>
 </div>
 
   <%= link_to "Ask a new question", ask_path %>
